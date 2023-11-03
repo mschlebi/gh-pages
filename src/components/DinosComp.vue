@@ -1,9 +1,9 @@
 <template>
-  <div class="hello">
+  <div>
     <div id="dino">
-      <div><img :src="this.head" alt="head"></div>
-      <div><img :src="this.torso" alt="torso"></div>
-      <div><img :src="this.foot" alt="foot"></div>
+      <div><img :src="this.head" alt="head" class="image"></div>
+      <div><img :src="this.torso" alt="torso" class="image"></div>
+      <div><img :src="this.foot" alt="foot" class="image"></div>
     </div>
     <p>
       <button class="button" @click="doIt">DO IT</button>
@@ -120,8 +120,12 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
+.image {
+  max-width: 80vw;
+}
+
 #dino {
-  width: 100%;
   flex-flow: column nowrap;
 }
 
